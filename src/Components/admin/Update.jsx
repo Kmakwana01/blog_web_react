@@ -49,7 +49,6 @@ const Update = () => {
         const postData = response.data.data;
 
         // Update the state with the fetched post data
-        console.log(postData.description_1)
 
         setFormData({
           main_heading: postData.main_heading || '',
@@ -107,7 +106,7 @@ const Update = () => {
     e.preventDefault();
 
     try {
-      const apiUrl = `/admin/posts/update/${id}`;
+      const apiUrl = `${BACKEND_URL}/admin/posts/update/${id}`;
       console.log('API URL:', apiUrl);
 
       const formDataToSend = new FormData();
