@@ -82,7 +82,7 @@ const YourFormComponent = () => {
 
     try {
       console.log('Form submitted');
-      const apiUrl = `https://odd-tan-bass-robe.cyclic.app/api/posts/create?id=${formData.category}`;
+      const apiUrl = `${BACKEND_URL}/api/posts/create?id=${formData.category}`;
       const formDataToSend = new FormData();
       console.log('FormData before append:', formDataToSend);
 
